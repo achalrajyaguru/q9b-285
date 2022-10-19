@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <style>
+
+
+
+
+
+
+    </style>
+    </head>
+
+    <body>
+  
+
+
+    <form action="/" method="POST">
+          <h2>Input: </h2>
+        Enter Stock Name 1 (Symbol): 
+        <input name="symbol1" type="text" />
+        <br>
+        Enter Initial Price:
+        <input name="user_input1" type="text" />
+        <br>
+        <br><br>
+
+   <h2>Input: </h2>
+        Enter Stock Name 2(Symbol): 
+        <input name="symbol2" type="text" />
+        <br>
+        Enter Initial Price:
+        <input name="user_input2" type="text" />
+        <br>
+        <br><br>
+
+   <h2>Input: </h2>
+        Enter Stock Name 3 (Symbol): 
+        <input name="symbol3" type="text" />
+        <br>
+        Enter Initial Price:
+        <input name="user_input3" type="text" />
+        <br>
+        <br><br>
+
+   <h2>Input: </h2>
+        Enter Stock Name 4 (Symbol): 
+        <input name="symbol4" type="text" />
+        <br>
+        Enter Initial Price:
+        <input name="user_input4" type="text" />
+        <br>
+        <br><br>
+
+   <h2>Input: </h2>
+        Enter Stock Name 5 (Symbol): 
+        <input name="symbol5" type="text" />
+        <br>
+        Enter Initial Price:
+        <input name="user_input5" type="text" />
+        <br>
+        <br><br>
+
+
+       
+        <input type="submit" value="Calculate" />
+    </form> 
+
+
+
+
+        <!-- <h2>Stock Info</h2><br> -->
+<form>
+        {% if request.method == "POST" and error == ""   %}
+
+         <h2>Stock Info 1</h2><br>
+        <b>Company Name:</b> {{companyName0}}<br>
+        <b>Initial Price:</b> $ {{user_input0}}<br>
+        <b>Time :</b> {{now0}}<br>
+        <b>Valuation per share : </b>$ {{twoDaysData0}}<br>
+        <b>Value Change :</b> $ {{valueChange0}}<br>
+        <b>Percent Change :</b> {{percentChange0}} %<br>
+
+        <br><br><br>
+
+
+         <h2>Stock Info 2</h2><br>
+        <b>Company Name:</b> {{companyName1}}<br>
+        <b>Initial Price:</b> $ {{user_input1}}<br>
+        <b>Time :</b> {{now1}}<br>
+        <b>Valuation per share : </b>$ {{twoDaysData1}}<br>
+        <b>Value Change :</b> $ {{valueChange1}}<br>
+        <b>Percent Change :</b> {{percentChange1}} %<br>
+
+        <br><br><br>
+
+        <h2>Stock Info 3</h2><br>
+        <b>Company Name:</b> {{companyName2}}<br>
+        <b>Initial Price:</b> $ {{user_input2}}<br>
+        <b>Time :</b> {{now2}}<br>
+        <b>Valuation per share : </b>$ {{twoDaysData2}}<br>
+        <b>Value Change :</b> $ {{valueChange2}}<br>
+        <b>Percent Change :</b> {{percentChange2}} %<br>
+
+        <br><br><br>
+
+
+         <h2>Stock Info 4</h2><br>
+        <b>Company Name:</b> {{companyName3}}<br>
+        <b>Initial Price:</b> $ {{user_input3}}<br>
+        <b>Time :</b> {{now3}}<br>
+        <b>Valuation per share : </b>$ {{twoDaysData3}}<br>
+        <b>Value Change :</b> $ {{valueChange3}}<br>
+        <b>Percent Change :</b> {{percentChange3}} %<br>
+
+        <br><br><br>
+
+
+         <h2>Stock Info 5</h2><br>
+        <b>Company Name:</b> {{companyName4}}<br>
+        <b>Initial Price:</b> $ {{user_input4}}<br>
+        <b>Time :</b> {{now4}}<br>
+        <b>Valuation per share : </b>$ {{twoDaysData4}}<br>
+        <b>Value Change :</b> $ {{valueChange4}}<br>
+        <b>Percent Change :</b> {{percentChange4}} %<br>
+
+        <br><br><br>
+
+        {% endif %}
+
+        {% if request.method == "POST" and error != ""   %}
+            <b style = "color:red" ><i> Error : {{error}} </i></b>
+        {% endif %}
+    </form>
+
+    </body>
+</html>
